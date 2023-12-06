@@ -3,7 +3,7 @@ import {UserService} from "../../services/user.service";
 import {UserComponent} from "../user/user.component";
 import {IPost, IUser} from "../../interfaces";
 import {PostsComponent} from "../posts/posts.component";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-users',
@@ -11,7 +11,8 @@ import {NgForOf} from "@angular/common";
   imports: [
     UserComponent,
     PostsComponent,
-    NgForOf
+    NgForOf,
+    NgIf
   ],
   templateUrl: './users.component.html',
   styleUrl: './users.component.css'
