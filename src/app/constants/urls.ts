@@ -11,6 +11,9 @@ const urls = {
   posts: {
     base: posts,
     byUserId:(id:number):string => `${users}/${id}/posts`
+  },
+  comments: {
+    byPostId:(id:number):string => `${posts}/${id}/comments`
   }
 }
 

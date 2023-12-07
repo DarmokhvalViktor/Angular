@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {IPost, IUser} from "../interfaces";
+import {IComment, IPost, IUser} from "../interfaces";
 import {urls} from "../constants";
 
 @Injectable({
@@ -19,8 +19,11 @@ export class UserService {
     return this.httpClient.get<IUser>(urls.users.byId(id))
   }
 
-  getPosts(id:number):Observable<IPost[]> {
+  getPostsByUserId(id:number):Observable<IPost[]> {
     return this.httpClient.get<IPost[]>(urls.posts.byUserId(id))
+  }
+  getComments(id:number):Observable<IComment[]> {
+    return this.httpClient.get<IComment[]>(urls.comments.byPostId(id))
   }
 
 }

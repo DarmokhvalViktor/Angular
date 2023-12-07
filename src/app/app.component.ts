@@ -7,8 +7,7 @@ import {UsersComponent} from "./components/users/users.component";
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, UsersComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: '<router-outlet></router-outlet>',
 })
 export class AppComponent {
   title = 'first-lesson';
